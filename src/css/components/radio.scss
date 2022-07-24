@@ -1,0 +1,88 @@
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: rem(5px) ;
+
+            &::before {
+                background: url(../img/order/check.svg) center center no-repeat; //local
+                // для git
+                // background: url(../../../WebBeginer/img/order/check.svg) center center no-repeat;
+            }
+        }
+
+        
+    }
+}
+
+.radio__elem {
+    display: none;
+
+    &:checked ~ .radio__visible {
+        &::before {
+            display: block;
+        }
+
+    }
+}
+
+.radio__visible {
+    width: rem(25px);
+    height: rem(25px);
+    position: relative;
+    border-radius:50%;
+    background: #fff;
+    margin-right: rem(10px);
+    margin-bottom: rem(17px);
+
+    &:last-child {
+        margin-right: 0; 
+
+    }
+
+    &::before {
+        content:'';
+        display: none;
+        width: rem(13px);
+        height: rem(13px);
+        background: $redBtn;
+        border-radius:50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.radio__title {
+    margin-right: rem(15px);
+
+    &:last-child {
+        margin-right: rem(15px);
+    }
+}
+
+.form__btns {
+    display: flex;
+    justify-content: center;
+    
+    @include tablets {
+        margin: rem(10px) 0 0 0;
+    }
+}
+
+.form__btns .btn {
+    margin-right: rem(10px);
+
+    @include tablets {
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

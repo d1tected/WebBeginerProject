@@ -1,0 +1,59 @@
+.btn {
+    background-color: $redBtn;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-family: 'Play', sans-serif;
+    padding: rem(21px) 4rem;
+    width: rem(175px);
+    height: rem(64px);
+    border-radius: rem(100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+
+    &--default {
+
+        cursor: pointer;
+
+        @include phones {
+            font-size: 4vmin
+        }
+
+        
+
+        &:hover {
+            background-color: $redBtnHover;
+        }
+    }
+
+    &--theme {
+        
+        &--transparent {
+            background:none;
+            justify-content: start;
+            font-weight: normal;
+            background-color:none;
+            text-transform: none;
+            
+        
+            &:hover {
+                color: #E01F3D;
+                background-color:none;
+                background:none;
+            }
+
+            @include tablets {
+                padding: rem(21px) 0;
+                width:rem(70px);
+            }
+
+            @include phones {
+                width:rem(70px)
+            }
+        }
+
+    }   
+}

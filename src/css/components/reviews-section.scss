@@ -1,0 +1,13 @@
+.reviews-section {
+    position: relative;
+    &::before{
+        content:'';
+        position: absolute;
+        background: #868686;
+        width: rem(35px);
+        height: rem(35px);
+        border-radius: 50%;
+        bottom: calc(-3.7vmin/2);
+        left: rem(80px);
+    }
+}

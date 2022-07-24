@@ -1,0 +1,28 @@
+.interective-avatar {
+    width: rem(74px);
+    height: rem(74px);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: rem(6px) solid transparent;
+    &--active {
+        border: rem(6px) solid $redBtn;
+    }
+}
+
+.interective-avatar-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.interective-avatar__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}

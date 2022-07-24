@@ -1,0 +1,92 @@
+.products-menu-section__title {
+    position: absolute;
+    top:0;
+    margin: 10% 0 0 8%;
+}
+
+.products-menu-section {
+    background: url(../img/products_menu/img_1.png) center/cover no-repeat;
+    position: relative; 
+    color: #fff;
+
+    .products-menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+
+        .products-menu__item {
+            display: flex;
+            
+
+
+            .products-menu__title {
+                position: relative;
+                width: 100px;
+
+                @include phones {
+                    width: 20vmin;
+                }
+                
+
+                .products-menu__text {
+                    // transform: translateY(-100%) rotate(-90deg);
+                    position: absolute;
+                    bottom: 2%;
+                    left: 50%;
+                    writing-mode: vertical-lr; 
+                    transform: rotate(180deg) translateX(50%);
+                    text-decoration: none;
+                    text-transform: none;
+                    font-size: 4vmin;
+                }
+            }
+
+            .products-menu__title-one {
+                background: #999999;
+            }
+    
+            .products-menu__title-two {
+                background: #151515;
+            }
+    
+            .products-menu__title-three {
+                background: #E01F3C;
+            }
+
+            .products-menu__content {
+                background:rgba(47, 50, 52, .9);
+                width: 0;
+                position: relative;
+                overflow: hidden;
+                transition: width .7s;
+
+                .products-menu__container {     
+                    padding: 6% 5%;
+
+                    .products-menu__close {
+                        position: absolute;
+                        top: 20px;
+                        right: 25px;
+                        border: none;
+                        background: transparent;
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    .products-menu__content-text {
+                        font-size: rem(16px);
+                        // padding: 8% 15% 8% 6%;
+                    }
+                }
+            }
+        }
+
+        
+        
+
+
+        
+    }
+}

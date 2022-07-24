@@ -1,0 +1,23 @@
+.long-chars,
+.long-chars__item {
+    display: flex;
+    align-items: center;
+}
+
+.long-char__icon {
+    margin: 0 rem(11px) 0 0;
+}
+
+.long-char__text {
+    font-family: 'Play', sans-serif;
+    width: rem(114px);
+    line-height: rem(18px);
+    font-weight: 400;
+}
+
+.long-chars__item {
+    margin: 0 rem(20px) 0 0;
+    &:last-child {
+        margin: 0;
+    }
+}

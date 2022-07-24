@@ -1,0 +1,50 @@
+
+
+
+// Размеры
+$containerWidth: 915px;
+$baseFonts: 16px;
+
+// Breakpoints
+$tablets: 768px;
+$phones: 480px;
+$phones320: 320px;
+
+// Цвета
+$redBtn: #E01F3D;
+$redBtnHover: #CA1B36;
+$blackText: #292929;
+$greyText: #666666;
+$greyBg: #F5F5F5;
+
+@import "media.scss";
+@import "./components/hamburger";
+@import "layout";
+@import "./components/hero";
+@import "./components/header";
+@import "./components/long-chars";
+@import "./components/btn";
+@import "./components/section";
+@import "./components/benefits";
+@import "./components/benefits-section";
+@import "./components/reviews-section";
+
+@import "components/reviews";
+@import "components/interective-avatar";
+@import "components/form";
+@import "components/order-section";
+@import "components/radio";
+@import "components/fixed-menu";
+@import "components/slider";
+@import "components/product-section";
+@import "components/fullscreen-menu";
+@import "components/product-characteristics";
+@import "components/team-section";
+@import "components/modal";
+@import "components/products-menu-section";
+@import "components/footer";
+@import "components/player";
+
+
+
+
