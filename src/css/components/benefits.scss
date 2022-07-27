@@ -50,8 +50,8 @@
         top: calc((100%/4) - 7%);
         left: 50%;
         right: 0;
-        // content: url(../../../WebBeginer/img/benefit/separator.svg); //GitHub
-        content: url(/src/img/benefit/separator.svg); //Local
+        content: url(../../../../WebBeginer/dist/img/benefit/separator.svg); //GitHub
+        // content: url(../../img/benefit/separator.svg); //Local
         transform: translateX(50%);
 
         @include tablets {
