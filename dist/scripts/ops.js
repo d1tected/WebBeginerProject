@@ -1,5 +1,8 @@
 const sections = $("section");
 const display = $(".maincontainer");
+const isLockedBody = document.body.classList;
+
+
 
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 isMobile = mobileDetect.mobile();
@@ -10,6 +13,12 @@ let inScroll = false;
 sections.first().addClass("active");
 
 const performTransition = sectionEq => {
+
+    if(document.body.classList.contains('locked')) return;
+
+    // if (pageScroll.isBlocked()) {
+    //     return;
+    // }
 
     if (inScroll === false) {
         inScroll = true;
@@ -100,7 +109,7 @@ $("[data-scroll-to]").click(e => {
     const reqSection = $(`[data-section-id=${target}]`);
 
     // console.log(reqSection.index());
-
+    document.body.classList.remove('locked');
     performTransition(reqSection.index());
 })
 
