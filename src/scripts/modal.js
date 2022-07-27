@@ -51,6 +51,7 @@ $(".form").submit(e => {
         })
 
         request.always(data => {
+            document.body.classList.add('locked');
             $.fancybox.open({
                 src: "#modal",
                 type: "inline"
@@ -59,7 +60,7 @@ $(".form").submit(e => {
 
         $(".app-close-modal").click((e) => {
             e.preventDefault();
-
+            document.body.classList.remove('locked');
             $.fancybox.close();
         })
     }
