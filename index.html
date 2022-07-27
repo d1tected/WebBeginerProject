@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
     <link rel="stylesheet" href="./css/main.css">
     <title>Beats</title>
 </head>
@@ -683,7 +683,41 @@
             <section data-sidemenu-theme="black" data-section-id="howwework" class="section player-section">
                 <div class="container container-player">
                     <h2 class="section__title">Как мы работаем</h2>
-                    <div class="player-section__container">
+                    <div class="player-section__wrapper">
+
+                        <div class="player-section__player">
+                            <video src="./video/video.mp4" id="player" poster="./img/player/player.png">
+                                <source src="./video/video.mp4" type="video/mp4">
+                            </video>
+                            <button class="player-section__player-img">
+                                <img src="./img/player/big-play.svg" alt="" class="play player-section__player__btn-img">
+                            </button>
+                        </div>
+
+                        <div class="player-section__toolbar">
+                            <div class="duration">
+                                <div class="duration__btn-wrap">
+                                    <button class="play duration__img"></button>
+                                </div>
+                                <div class="duration__length-wrap">
+
+
+                                    <input type="range" class="duration__length" id="durationLevel">
+                                </div>
+                            </div>
+
+                            <div class="sound">
+                                <button class="sound__btn">
+                                    <img src="./img/player/mic.svg" class="sound__mic" id="dynamic" alt="">
+                                </button>
+                                <div class="sound__volume">
+                                    <input type="range" class="duration__length duration__length--other"
+                                    id="micLevel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="player-section__container">
                         <div class="player">
                         <div class="player__wrapper">
                             <div id="yt-player" class="player__elem"></div>
@@ -697,16 +731,16 @@
                             <div class="player__duration">
                                 <span class="player__duration-completed">0:00</span> :
                                 <span class="player__duration-estimate">0:00</span>
-                            </div>
+                            </div> -->
                             <!-- <div class="volume__duration">
                                 <div>
                                     <input id="volume" type="range" value="50" min="0" max="100" oninput="rangevalue.value=value"/>
                                     <output id="volume_value"></output>
                                 </div>
                             </div> -->
+                        <!-- </div>
                         </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -858,12 +892,12 @@
         <nav class="menu menu--vertical">
             <ul class="menu__list">
                 <li class="menu__item"><a href="#" data-scroll-to="benefits" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Команда</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Наушники</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Цены</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Как мы работаем</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link">Команда</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="products-menu" class="menu__link">Наушники</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="products" class="menu__link">Цены</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="howwework" class="menu__link">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -883,7 +917,7 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
     
-
+    <script src="./scripts/pageScroll.js"></script>
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/tabs.js"></script>
     <script src="./scripts/acco.js"></script>
